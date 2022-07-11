@@ -1,0 +1,23 @@
+JAVASCRIPT 문법 기초
+
+var (옛날문법)
+let(변수)와 const(상수)로 나뉜다. 자료나 함수를 담는다.
+
+let은 선언과 할당을 따로 해 줄 수 있지만
+let name;
+name = seungah;
+
+const는 선언과 할당을 동시에 해야 한다.
+const name; -> 할당만 할 경우 에러가 난다.
+const name = seungah;
+
+
+자료형 
+숫자 
+문자 
+참거짓 
+undefined  
+null 
+객체 
+배열 
+함수
