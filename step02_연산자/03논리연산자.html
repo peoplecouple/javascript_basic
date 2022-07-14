@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연산자03 - 논리연산자</title>
+</head>
+
+<body>
+
+
+  <script>
+    let 참 = true;
+    let 거짓 = false;
+    const a = '배성아'
+
+    console.log(참, 거짓);
+    console.log(!참, 거짓); //! NOT 부정연산자
+
+    console.log(참 && 거짓); // AND 연산자
+    console.log(참 || 거짓); // OR 연산자
+
+    a ? console.log(a + '참참참') : console.log('거짓거짓거짓');
+
+    if (a) {
+      console.log(a + '참참참')
+    } else {
+      console.log('거짓거짓거짓');
+    }
+
+    a && console.log(a + '참참참');
+    a || console.log(a + '참참참');
+    a || console.log(a + '거짓거짓거짓');
+
+
+    //리액트
+    const Test = () => {
+      return (
+        a && <h1>눈누난나</h1> //참일때만 h1태그 리턴
+        // a ? <h2>니나노</h2> : <h2>노나니</h2>  참, 거짓일때 각각이 태그 리턴
+      )
+    }
+
+  </script>
+</body>
+
+</html>

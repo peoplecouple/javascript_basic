@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연산자01 - 산술연산자</title>
+</head>
+
+<body>
+
+
+  <script>
+    let a = 1;
+    let b = 2;
+
+    let A = '1';
+    let B = '2';
+
+    const D = '배성아';
+
+    console.log(a + b);
+    console.log(A + B);
+
+    let C = A + B;
+    console.log(C, typeof (C));
+
+    let E = a + A;
+    console.log(E, typeof (E)) //자동형변환이 일어나서 오류없이 더해짐(숫자a의 문자화). 숫자와 문자를 더했는데 문자가 됨
+    //이런점 때문에 typescript를 배운다.
+
+    console.log(a - b, A - B);
+    console.log(a - B, B - a, A * B, A / B, 1 / 0, b % a);
+
+    let F = 10;
+    let G = 3;
+
+    console.log(F % G)
+
+    F % 2 ? console.log('홀수') : console.log('짝수');
+
+  </script>
+</body>
+
+</html>

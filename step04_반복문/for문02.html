@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문01 - for문</title>
+</head>
+
+<body>
+
+  <div id="num">0</div>
+  <ul id="list">
+    <li>sum01</li>
+    <li>sum02</li>
+    <li>sum03</li>
+    <li>sum04</li>
+  </ul>
+
+  <script>
+
+
+    const UL = document.querySelector('#list')
+    console.log(UL)
+
+    const LI = document.querySelectorAll('#list li')
+    console.log(LI)
+
+    for (i = 0; i < LI.length; i++) {
+      LI[i].style.color = 'red'
+    }
+
+    LI.forEach(el => el.style.fontSize = "21px")
+
+    // const 색바꾸기 = function () {
+    //   this.style.color = 'blue'
+    // };
+
+    // LI[1].addEventListener('click', 색바꾸기)
+
+
+    const NUM = document.querySelector('#num')
+
+
+    LI.forEach(function (el, idx) {
+      el.addEventListener('click', function () {
+        LI.forEach(function (el) {
+          el.style.color = ""
+        })
+        el.style.color = "yellow"
+        NUM.innerText = idx
+      })
+    })
+
+    //인덱스번호 받는 법
+    LI.forEach((el, idx) => {
+      el.addEventListener('click', function () {
+        LI.forEach((el) => el.style.color = "")
+        el.style.color = "yellow"
+        console.log(el, idx)
+      })
+    })
+
+
+    // 화살표 함수 썼을 때의 코드
+    // LI.forEach((el) => {
+    //   el.addEventListener('click', function () {
+    //     LI.forEach((el) => el.style.color = "")
+    //     el.style.color = "yellow"
+    //   })
+    // })
+
+    // jquery로 했을 때의 코드
+    // $('#list li').on('click', function () {
+    //   $('#list li').css({ color: 'blue' });
+    //   $(this).css({ color: 'yellow' })
+    // })
+
+
+
+
+
+    const DATA = ['하나', '둘', '셋', '넷'];
+    console.log(DATA);
+
+    for (i = 0; i < DATA.length; i++) {
+      console.log(DATA[i]);
+    }
+
+    let sum = 0;
+    for (i = 1; i < 10; i++) {
+      console.log(i);
+    }
+
+    LI.forEach(function (el, idx) {
+      el.addEventListener('click', function () {
+        LI.forEach(function (el) {
+          el.style.color = ""
+        })
+        el.style.color = "yellow"
+        NUM.innerText = DATA[idx]
+      })
+    })
+
+
+  </script>
+</body>
+
+</html>

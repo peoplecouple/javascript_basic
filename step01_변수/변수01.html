@@ -9,14 +9,22 @@
 </head>
 
 <body>
+  <h1>변수</h1>
+  <hr>
+  <h2>변수를 선언하는 방법</h2>
 
+  <ul>
+    <li>var, let, const를 붙여서 선언한다. (var는 ECMA6 이전의 용법이므로 쓰지 않는다.)</li>
+    <li>let은 값이 변하는 원시형 타입(숫자, 문자, 참거짓, undefined, null)을 담는다.</li>
+    <li>const는 값이 변하지 않는 상수를 담는다. 선언과 동시에 할당이 이루어져야 한다.</li>
+  </ul>
 
   <script>
     // 1. 문자, $, _ 를 사용하여 이름을 붙힌다. 
-    // 2. 변수명에 공백은 올 수 없다.
+    // 2. 변수명에 공백은 올 수 없다.   
     // 3. 예약어는 변수 이름으로 올 수 없다.
     // ex) class, this, function, if, for, true, false, undefined, null ...
-    const 배성아 = "홧힝";    // const는 선언과 동시에 할당해야 한다.
+    const 배성아 = "홧힝";    // const는 선언과 동시에 할당해야 한다. const 자체는 변하지 않는다.
     console.log(배성아);
 
   </script>
