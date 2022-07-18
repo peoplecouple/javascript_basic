@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 01</title>
+</head>
+
+<body>
+  <div id="App"></div>
+
+
+  <script>
+
+    이름('배성아', '잔다'); //선언전 호출을 해도 hoisting이 되서 오류 안나고 실행됨
+
+    function 이름(a, b) {
+      console.log(a, b)
+    };
+
+    이름('배성아', '일어난다');
+
+    //이름2() //표현식은 선언전 호출하면 hoisting되지 않아 오류가 난다. 
+
+    const 이름2 = function (a) {
+      console.log(a)
+    };
+
+    이름2('표현식 함수는 호이스팅 안된다');
+
+    const 이름3 = a => console.log(a) //매개변수 하나 식이 하나면 각() {} 괄호를 생략할 수 있다.  
+
+
+    이름3('화살표함수')
+
+  </script>
+</body>
+
+</html>
