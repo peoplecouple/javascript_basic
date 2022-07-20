@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 02 - spread연산자</title>
+</head>
+
+<body>
+
+  <script>
+
+    // 1. 스프레드 연산자는 늘여 놓는 것이다.
+    const animal = {
+      leg: 4,
+      type: 'animal',
+      mouth: 1
+    }
+
+    const cow = {
+      ...animal,
+      c_sound: 'muuuuuuu'
+    }
+
+    const horse = {
+      ...animal,
+      c_sound: 'ehhhiiiing'
+    }
+
+    const dog = {
+      ...animal,
+      c_sound: 'mungmung'
+    }
+
+    console.log(cow, horse, dog)
+  </script>
+</body>
+
+</html>

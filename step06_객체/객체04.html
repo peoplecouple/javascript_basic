@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>객체 04 -객체생성자함수 </title>
+</head>
+
+<body>
+
+  <script>
+    // 1. 객체를 찍어내는 기계를 만드는 옛날 방법, class로 바뀐다
+    function Bae(name) { //생성자함수의 이름은 대문자로 시작하는게 룰이다.
+      this.name = name;
+      this.showName = function () {
+        console.log(this.name)
+      }
+    }
+
+    const 배성아 = new Bae('배성아');
+    배성아.showName();
+
+    const 이창훈 = new Bae('이창훈');
+    이창훈.showName();
+
+    Bae.prototype.group = '추웡'
+    console.log(배성아.group)
+    console.log(이창훈.group)
+
+    // 인스턴스란 무엇인가?
+
+  </script>
+
+</body>
+
+</html>
