@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>배열을 공부합니다. 03</h1>
+  <div class="tabMenu">
+    <ul class="tMenu">
+      <li>menu01</li>
+      <li>menu02</li>
+      <li>menu03</li>
+    </ul>
+  </div>
+  <div class="tContent">
+    <div>content01</div>
+    <div>content02</div>
+    <div>content03</div>
+  </div>
+
+  <script>
+
+    const 배열 = [
+      { id: 1, content: '자두' },
+      { id: 2, content: '수박' },
+      { id: 3, content: '무화과' },
+      { id: 4, content: '복숭아' },
+      { id: 5, content: '바나나' },
+      { id: 6, content: '블루베리' },
+      { id: 7, content: '사과' },
+    ]
+
+    // 배열을 도와주는 함수 01.forEach (요소, 인덱스, 배열자체)
+    배열.forEach((el, idx, arry) => console.log(el, idx, arry))
+    console.log('')
+
+    const TUL = document.querySelectorAll('.tMenu>li')  // 유사배열로 담김, map은 쓸 수 없지만 forEach는 쓸 수 있다.
+    const TCON = document.querySelectorAll('.tContent>div')
+
+
+
+    TUL.forEach((el, idx) => {
+      el.addEventListener('click', function () {
+        TUL.forEach(el => el.classList.remove('on'))
+        el.classList.add('on')
+        TCON.forEach(el => el.classList.remove('on'))
+        TCON[idx].classList.add('on')
+      })
+    })
+
+    const 스프레드 = [...TUL]
+    console.log(스프레드)
+
+    const UL = document.querySelector('.tMenu')
+    const LI = [...UL.children]
+    console.log(LI)
+
+    //indexOf = 번호를 받아온다
+    UL.addEventListener('click', (e) => {
+      let idx = LI.indexOf(e.target)
+
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열 05</title>
+</head>
+
+<body>
+  <ul id="UL"></ul>
+
+  <script>
+    const DATA = [
+      { id: 1, content: "나는 메로나다", date: "2022년 7월 21일" },
+      { id: 2, content: "나는 바밤바다", date: "2022년 7월 22일" },
+      { id: 3, content: "나는 월드콘다", date: "2022년 7월 23일" },
+      { id: 4, content: "나는 구구콘다", date: "2022년 7월 24일" },
+      { id: 5, content: "나는 스크류바다", date: "2022년 7월 25일" },
+    ]
+
+    const Result = DATA.map(data => `<li> ${data.content} </li>`).join('')
+    //join('') 이걸 쓰니 배열사이를 구분한 , 가 안나옴, 리액트에서는 , 설정없이 안나옴
+    //{}에 쌌을 땐 return을 쓰면 됨
+
+    console.log(Result);
+    document.querySelector('#UL').innerHTML = Result
+
+
+
+  </script>
+</body>
+
+</html>

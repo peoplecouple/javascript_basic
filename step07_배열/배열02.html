@@ -10,19 +10,45 @@
 
 <body>
   <h1>배열을 공부합니다. 02</h1>
+  <ul id="UL"></ul>
 
   <script>
     // 1. 배열을 순회하여 배열 각각을 호출
-    const 배열 = [1, 2, 3, 4, 5]
+    const 배열 = ['가', '나', '다', '라', '마']
 
     console.log(배열)
 
-    for(i = 0 ; i < 배열.length; i++){
+    for (i = 0; i < 배열.length; i++) {
       console.log(배열[i])
     }
+    console.log('')
 
-    배열.forEach(el => console.log(el))
+    for (i = 배열.length - 1; i >= 0; i--) {
+      console.log(배열[i])
+    }
+    console.log('')
 
+    // for...in은 인덱스 번호를 반환
+    for (i in 배열) {
+      console.log(i)
+    }
+    // 이렇게 쓰면 요소값을 반환  
+    // }for(i in 배열){
+    //   console.log(배열[i])
+    // }
+
+    // for...of는 요소값을 반환
+    console.log('')
+    for (i of 배열) {
+      console.log(i)
+    }
+
+    // for문을 사용해서 html 생성
+    for (i of 배열) {
+      UL.innerHTML += '<li>' + i + '</li>'
+    }
+
+ 
   </script>
 </body>
 

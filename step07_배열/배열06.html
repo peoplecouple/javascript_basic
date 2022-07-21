@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열 06</title>
+</head>
+
+<body>
+  <ul id="UL"></ul>
+
+  <script>
+    const DATA = [
+      { id: 1, content: "나는 메로나다", date: "2022년 7월 21일" },
+      { id: 2, content: "나는 바밤바다", date: "2022년 7월 22일" },
+      { id: 3, content: "나는 월드콘이다", date: "2022년 7월 23일" },
+      { id: 4, content: "나는 구구콘이다", date: "2022년 7월 24일" },
+      { id: 5, content: "나는 스크류바다", date: "2022년 7월 25일" },
+    ]
+
+    const RESULT = DATA.filter(el => el.content !== "나는 메로나다");
+    const NEWLIST = RESULT.map(el => `<li>${el.content} <small>${el.date}</small><button>삭제</button></li>`).join('')
+
+    console.log(RESULT)
+    console.log(NEWLIST)
+
+    UL.innerHTML = NEWLIST
+    LI = document.querySelectorAll('#UL>li') //forEach안에 들어가니 idx가 꼬임
+
+    const BTN = document.querySelectorAll('button')
+    BTN.forEach((button, idx) => {
+      button.addEventListener('click', () => { LI[idx].remove() })
+    })
+
+  </script>
+</body>
+
+</html>
